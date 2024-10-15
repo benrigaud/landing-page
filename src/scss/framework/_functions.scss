@@ -1,0 +1,125 @@
+@use "sass:math";
+
+@mixin desktop-sm-down {
+
+	@media screen and (max-width: $break-point-desktop-sm-max) {
+
+		@content;
+	}
+}
+
+@mixin desktop-sm-up {
+
+	@media screen and (min-width: #{$break-point-desktop-sm-max + 1}) {
+
+		@content;
+	}
+}
+
+@mixin tablet-down {
+
+	@media screen and (max-width: $break-point-tablet-max) {
+
+		@content;
+	}
+}
+
+@mixin tablet-up {
+
+	@media screen and (min-width: #{ $break-point-tablet-max + 1}) {
+
+		@content;
+	}
+}
+
+@mixin phone-down {
+
+	@media screen and (max-width: $break-point-phone-max) {
+
+		@content;
+	}
+}
+
+@mixin phone-up {
+
+	@media screen and (min-width: #{$break-point-phone-max + 1}) {
+
+		@content;
+	}
+}
+
+@mixin phone-sm-down {
+
+	@media screen and (max-width: $break-point-phone-sm) {
+
+		@content;
+	}
+}
+
+@mixin phone-sm-up {
+
+	@media screen and (min-width: #{$break-point-phone-sm + 1}) {
+
+		@content;
+	}
+}
+
+@mixin responsive-down($breakpoint) {
+
+	@media screen and (max-width: $breakpoint) {
+
+		@content;
+	}
+}
+
+@mixin responsive-up($breakpoint) {
+
+	@media screen and (min-width: $breakpoint) {
+
+		@content;
+	}
+}
+
+
+@function rem($size, $font-size: $html-font-size) {
+	$rem-size: math.div($size, $font-size);
+
+	@return #{$rem-size}rem;
+}
+
+@function line-height($line-height, $font-size) {
+	$line-height: math.div($line-height, $font-size);
+
+	@return #{$line-height};
+}
+
+@function letter-spacing($spacing) {
+	$letter-spacing: math.div($spacing, 1000);
+
+	@return #{$letter-spacing}em;
+}
+
+@function text-indent($spacing) {
+	$text-indent: math.div(math.div($spacing, 1000), 2);
+
+	@return #{$text-indent}em;
+}
+
+@mixin placeholder {
+
+	&::-webkit-input-placeholder {
+		@content
+	}
+
+	&:-moz-placeholder {
+		@content
+	}
+
+	&::-moz-placeholder {
+		@content
+	}
+
+	&:-ms-input-placeholder {
+		@content
+	}
+}

@@ -1,0 +1,51 @@
+@import "variables";
+@import "framework/framework";
+@import "../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-pro/scss/brands";
+
+html {
+	background: $color-black;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1;
+
+	@include desktop-sm-down {
+		font-size: 15px;
+	}
+
+	@include tablet-down {
+		font-size: 14px;
+	}
+
+	@include phone-down {
+		font-size: 13px;
+	}
+
+	@include phone-sm-down {
+		font-size: 12px;
+	}
+}
+
+body {
+	color: $color-white;
+}
+
+a {
+	color: $color-white;
+
+	@include hover-focus {
+		color: $color-white;
+	}
+}
+
+header {
+
+}
+
+main {
+
+}
+
+footer {
+
+}
