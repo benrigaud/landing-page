@@ -41,7 +41,7 @@ const styles = () => {
 	return gulp
 		.src( config.src_path + 'scss/**/*.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( cached( 'sass' ) ) // Cache compiled SASS files
+		// .pipe( cached( 'sass' ) ) // Cache compiled SASS files
 		.pipe(
 			sass( {outputStyle: 'compressed'} ).on( 'error', sass.logError )
 		)
