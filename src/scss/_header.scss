@@ -1,0 +1,109 @@
+header{
+  padding: 40px 0 0;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .container{
+    .split{
+      .side{
+        .header-logo{
+          svg{
+            path{
+              transition: all .4s;
+              fill: $white;
+            }
+          }
+        }
+        .menu{
+          position: fixed;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100vh;
+          background-color: $light;
+          color: $black;
+          transition: all .4s;
+          opacity: 0;
+          ul{
+            list-style: none;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            a{
+              color: $gray;
+              text-align: center;
+              font-size: 22px;
+              padding: 20px;
+              display: block;
+              &:hover{
+                color: $primary;
+              }
+            }
+          }
+          &.active{
+            left: 0;
+            opacity: 1;
+          }
+        }
+        &:first-child{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+  @include tablet-up{
+    .container{
+      .split{
+        justify-content: space-between;
+        .side{
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          max-width: 50%;
+          .header-logo{
+            svg{
+              path{
+                fill: $primary;
+              }
+            }
+          }
+          .menu{
+            position: unset;
+            opacity: 1;
+            height: unset;
+            background-color: transparent;
+            ul{
+              height: unset;
+              gap: 15px;
+              flex-direction: row;
+              transform: translateY(4px);
+              a{
+                padding: 0;
+                @include hover-focus{
+                  color: $primary;
+                }
+              }
+            }
+          }
+          .chat{
+            transition: all .4s;
+            transform: scale(0.9);
+            opacity: .8;
+            @include hover-focus{
+              transform: scale(1.1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

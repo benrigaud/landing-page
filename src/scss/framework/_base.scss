@@ -73,10 +73,6 @@ p {
 	max-width: $container-max-width;
 	padding: 0 $gutter-size;
 	width: 100%;
-	
-	@media screen and (max-width: 1299px) {
-		max-width: 960px;
-	}	
 }
 
 /* Media */
