@@ -2,10 +2,17 @@
 @import "framework/framework";
 @import "../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome";
 @import "../../node_modules/@fortawesome/fontawesome-pro/scss/brands";
+@import "../../node_modules/@fortawesome/fontawesome-pro/scss/solid";
+@import "header";
+@import "footer";
+
+// blocks
+@import "blocks/hero";
 
 html {
-	background: $color-black;
+	background: $black;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: $font-primary;
 	font-size: 16px;
 	line-height: 1;
 
@@ -27,25 +34,95 @@ html {
 }
 
 body {
-	color: $color-white;
+	color: $white;
 }
 
 a {
-	color: $color-white;
+	color: $white;
 
 	@include hover-focus {
-		color: $color-white;
+		color: $white;
 	}
 }
 
-header {
-
+h1,h2,h3,h4,p,ul{
+	margin: 0;
 }
 
-main {
-
+.desktop{
+	@include tablet-down{
+		display: none !important;
+	}
 }
 
-footer {
+.mobile{
+	@include tablet-up{
+		display: none !important;
+	}
+}
 
+.split{
+	display: flex;
+	flex-direction: column;
+	@include tablet-up{
+		flex-direction: row;
+	}
+}
+
+.menu-trigger{
+	width: 24px;
+	height: 12px;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	position: relative;
+	&::before,
+	&::after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: $light;
+		transition: all .4s;
+		position: absolute;
+	}
+	&::before{
+		top: 0;
+	}
+	&::after{
+		bottom: 0;
+	}
+	&.close{
+		position: absolute;
+		top: 50px;
+		right: 20px;
+		&::before,
+		&::after{
+			background-color: $black;
+		}
+		&::before{
+			transform: rotate(45deg);
+			top: 5px;
+		}
+		&::after{
+			transform: rotate(-45deg);
+			bottom: 5px;
+		}
+	}
+}
+
+.btn-arrow{
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	border: solid 2px $primary;
+	color: $primary;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include hover-focus{
+		color: $black;
+		border-color: $black;
+	}
 }
