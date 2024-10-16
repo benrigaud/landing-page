@@ -10,6 +10,7 @@
 @import "blocks/hero";
 @import "blocks/about";
 @import "blocks/newsletter";
+@import "blocks/inspiration";
 
 html {
 	background: $black;
@@ -138,11 +139,13 @@ h1,h2,h3,h4,p,ul{
 	align-items: center;
 	gap: 5px;
 	font-family: "Lato", sans-serif;
+	max-width: max-content;
 	i{
 		font-size: 10px;
 		transition: all .4s;
 	}
 	@include hover-focus{
+		color: $primary;
 		i{
 			transform: translateX(5px);
 		}
