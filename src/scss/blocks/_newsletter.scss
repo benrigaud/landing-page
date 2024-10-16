@@ -1,0 +1,66 @@
+.newsletter-block{
+  background-color: $white;
+  padding: 40px 0;
+  color: $black;
+  .container{
+    .split{
+      gap: 30px;
+      .side{
+        h3{
+          font-size: 35px;
+          font-family: $font-secondary;
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: 18px;
+          color: $gray;
+          line-height: 1.4;
+          margin-bottom: 20px;
+        }
+        form{
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          input{
+            background-color: $light;
+            border: solid 1px $light;
+            padding: 15px;
+            color: $gray;
+            font-size: 18px;
+          }
+          button{
+            background-color: $black;
+            border: solid 1px $black;
+            color: $white;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: "Karla", sans-serif;
+          }
+        }
+      }
+    }
+  }
+  @include tablet-up{
+    padding: 60px 0;
+    .container{
+      .split{
+        align-items: center;
+        .side{
+          flex: 1;
+          form{
+            flex-direction: row;
+            gap: 20px;
+            input{
+              flex: 1;
+            }
+            button{
+              padding: 15px 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

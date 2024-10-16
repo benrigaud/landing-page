@@ -8,6 +8,8 @@
 
 // blocks
 @import "blocks/hero";
+@import "blocks/about";
+@import "blocks/newsletter";
 
 html {
 	background: $black;
@@ -15,6 +17,7 @@ html {
 	font-family: $font-primary;
 	font-size: 16px;
 	line-height: 1;
+	scroll-behavior: smooth; 
 
 	@include desktop-sm-down {
 		font-size: 15px;
@@ -124,5 +127,24 @@ h1,h2,h3,h4,p,ul{
 	@include hover-focus{
 		color: $black;
 		border-color: $black;
+	}
+}
+
+.link-arrow{
+	color: $primary;
+	font-size: 17px;
+	font-weight: 900;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-family: "Lato", sans-serif;
+	i{
+		font-size: 10px;
+		transition: all .4s;
+	}
+	@include hover-focus{
+		i{
+			transform: translateX(5px);
+		}
 	}
 }
