@@ -1,8 +1,8 @@
 # Frontend Developer Challenge | Landing Page
 
 This landing page is part of the Frontend Developer Challenge for purplefire.io
-Due to the time available there are improvements to be made, but i think its in a good spot for review.
-Hope to hear back from you, thanks for the opportunity. 🙌
+Improvements are needed due to the time available, but I think it's in a good spot for review.
+I hope to hear back from you, thanks for the opportunity. 🙌
 
 
 ### Prerequisites
