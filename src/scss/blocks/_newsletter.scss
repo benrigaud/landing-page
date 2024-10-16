@@ -28,6 +28,10 @@
             padding: 15px;
             color: $gray;
             font-size: 18px;
+            @include hover-focus{
+              outline: none;
+              border-color: $black;
+            }
           }
           button{
             background-color: $black;
