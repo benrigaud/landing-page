@@ -1,3 +1,4 @@
+const { duration } = require("moment/moment");
 const { space } = require("postcss/lib/list");
 
 jQuery( document ).ready(function($) {
@@ -37,6 +38,12 @@ jQuery( document ).ready(function($) {
       delay: 0,
       pauseOnMouseEnter: true,
     },
+  });
+
+  // animations
+  AOS.init({
+    duration: 1000,
+    once: true,
   });
 
 });
