@@ -31,14 +31,6 @@ Install the dependencies:
 npm install
 ```
 
-Install the dependencies:
-
-```
-npm install
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Development
 
 To start the development server with live reloading, run:
